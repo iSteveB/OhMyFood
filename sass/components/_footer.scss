@@ -1,0 +1,31 @@
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  color: white;
+  background: #353535;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    
+  }
+  
+  li{
+    display: flex;
+
+    .fa-solid {
+      margin-right: 10px;
+    }
+  }
+
+  
+  img {
+    width: 135px;
+    height: 27px;
+    filter: brightness(0) invert(1);
+  }
+}
