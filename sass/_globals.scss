@@ -7,8 +7,30 @@ $color-tertiary: #99E2D0;
 $background-color-primary: #f6f6f6;
 $background-color-secondary: #eaeaea;
 
-@mixin box-shadow {
+@mixin drop-shadow {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin linear-gradient {
+  background: linear-gradient(170deg, $color-primary, $color-secondary);
+}
+
+@mixin btn {
+  margin: 20px auto;
+  max-width: 230px;
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  padding: 13px 18.75px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  @include linear-gradient;
+  &:hover {
+    opacity: 0.85;
+  }
 }
 
 * {
@@ -20,6 +42,18 @@ $background-color-secondary: #eaeaea;
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: 'Roboto', cursive;
+  font-weight: lighter;
+  font-size: 1.125rem;
 }
 
 p {
