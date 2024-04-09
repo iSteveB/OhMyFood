@@ -19,8 +19,61 @@
       font-family: Roboto, cursive;
     }
 
+    h2 {
+      font-weight: lighter;
+    }
+
     &__btn {
       @include btn;
+    }
+  }
+
+  &__tuto {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 30px;
+
+    h2 {
+      align-self: start;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &_item {
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      @include drop-shadow;
+      background: $background-color-primary;
+
+      i {
+        padding-left: 5px;
+        color: grey;
+      }
+
+      .fa-store {
+        color: $color-primary;
+      }
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -10px;
+        background: $color-primary;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
