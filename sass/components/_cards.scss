@@ -1,0 +1,43 @@
+.home__restaurant__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 20px;
+  background-color: white;
+
+  &__img {
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      aspect-ratio: 3 / 2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+    i.fa-heart {
+      width: 30px;
+      height: 30px;
+    }
+    
+    i.fa-solid{
+      color: $color-primary;
+    }
+
+    &__heart {
+      height: 22px;
+      width: 21px;
+      gap: 10px;
+
+    }
+  }
+
+}

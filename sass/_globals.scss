@@ -6,14 +6,12 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $background-color-primary: #f6f6f6;
 $background-color-secondary: #eaeaea;
+$linear-gradient: linear-gradient(170deg, $color-primary, $color-secondary);
 
 @mixin drop-shadow {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@mixin linear-gradient {
-  background: linear-gradient(170deg, $color-primary, $color-secondary);
-}
 
 
 * {
@@ -41,4 +39,9 @@ h2 {
 
 p {
   color: #353535;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
