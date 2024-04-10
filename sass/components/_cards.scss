@@ -39,5 +39,35 @@
 
     }
   }
+}
 
+.restaurant__menu__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 20px;
+  background-color: white;
+  padding: 15px;
+  @include drop-shadow;
+
+  &__entitled {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: lighter;
+    text-overflow: ellipsis;
+  }
+
+  span {
+    font-weight: 500;
+  }
 }
