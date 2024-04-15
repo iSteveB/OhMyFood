@@ -1,4 +1,10 @@
-@import './globals';
+@import './base/reset';
+@import './base/typo';
+
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/keyframes';
+
 
 @import './components/header';
 @import './components/footer';
