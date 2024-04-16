@@ -51,6 +51,7 @@
 }
 
 .restaurant__menu__card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,21 +59,58 @@
   border-radius: 20px;
   background-color: white;
   padding: 15px;
+  overflow: hidden;
+  cursor: pointer;
   @include drop-shadow;
 
   &__entitled {
     display: flex;
+    flex: 1;
+    min-width: 0;
     flex-direction: column;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     gap: 5px;
+  }
+
+  &__check {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 22px 20px;
+    color: white;
+    font-size: 26.5px;
+    border-radius: 0 20px 20px 0;
+    transform: translateX(67px);
+    background-color: $color-tertiary;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover &__check {
+    transform: translateX(0); 
+  }
+
+  .price {
+    margin-right: 0;
+    transition: all .3s ease-in-out;
+  }
+  &:hover .price {
+    margin-right: 68px;
   }
 
   h3 {
     font-size: 18px;
     font-weight: 500;
+
   }
 
   p {
     font-weight: lighter;
+  }
+
+  h3, p {
+    overflow: hidden;
     text-overflow: ellipsis;
   }
 
