@@ -5,6 +5,11 @@
   border-radius: 20px;
   background-color: white;
 
+  @media (min-width: 1024px) {
+    width: 490px;
+    flex-wrap: wrap;
+  }
+
   &__img {
     position: relative;
     width: 100%;
@@ -14,6 +19,10 @@
       object-fit: cover;
       border-radius: 15px 15px 0 0;
       aspect-ratio: 3 / 2;
+
+      @media (min-width: 1024px) {
+        aspect-ratio: 3 / 1;
+      }
     }
   }
 
@@ -27,8 +36,8 @@
       width: 30px;
       height: 30px;
     }
-    
-    i.fa-solid{
+
+    i.fa-solid {
       color: $color-primary;
     }
 

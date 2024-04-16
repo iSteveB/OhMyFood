@@ -4,8 +4,8 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  
-  &__hero {  
+
+  &__hero {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -37,6 +37,11 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      @media(min-width: 1024px) {
+        flex-direction: row;
+        gap: 100px
+      }
     }
 
     &_item {
@@ -52,6 +57,11 @@
       i {
         padding-left: 5px;
         color: grey;
+
+        &:active {
+          color: $color-primary;
+          background-color: $color-primary;
+        }
       }
 
       .fa-store {
@@ -83,13 +93,25 @@
 
     &__container {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       gap: 20px;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px 80px;
+      }
     }
 
     h2 {
       font-size: 1.5rem;
       padding-left: 25px;
+
+      @media (min-width: 1024px) {
+        padding-left: 170px;
+      }
     }
   }
 }
