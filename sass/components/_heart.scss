@@ -1,6 +1,45 @@
+.icon-wrapper {
+  position: relative;
+}
 
-.fa-regular.fa-heart {
-  &:active {
-    opacity: 0.5;
+.fa-regular.fa-heart, .fa-solid.fa-heart {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.restaurant__menu__title {
+
+  .fa-regular.fa-heart, .fa-solid.fa-heart {
+    position: absolute;
+  
   }
+}
+
+.checkbox {
+  display: none;
+}
+
+.border {
+  color: black; /* Couleur par défaut pour non-coché */
+  z-index: 1;
+}
+
+.filled {
+  background: $linear-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; /* Masqué par défaut */
+  z-index: 0;
+}
+
+.checkbox:checked + .icon-wrapper .filled {
+  opacity: 1; /* Afficher le gradient lorsque coché */
+}
+
+.checkbox:checked + .icon-wrapper .border {
+  opacity: 0; /* Cacher la bordure lorsque coché */
 }
