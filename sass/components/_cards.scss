@@ -128,4 +128,14 @@
   span {
     font-weight: 500;
   }
+
+  &--fade {
+    @for $i from 1 through 9 {
+      &-#{$i} {
+        opacity: 0;
+        animation: .5s ease-in fade-in forwards;
+        animation-delay: $i * 500ms;
+      }
+    }
+  }
 }
